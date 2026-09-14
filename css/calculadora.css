@@ -1,0 +1,52 @@
+/* =========================================================
+   CALCULADORA DE PINTURAS — presentación visual
+   Adaptado desde calculadora.html original.
+   Solo se modificaron los valores de las variables --pc-*
+   (colores y tipografías) para integrarla con la identidad
+   de Nitxu.Art. La estructura de clases, el marcado HTML y
+   la lógica de cálculo en calculadora.js NO se modificaron.
+   ========================================================= */
+
+.paint-calculator {
+  /* Original (tema oscuro): --pc-bg:#211d1a; --pc-surface:#2c2620;
+     --pc-ink:#f1e9db; --pc-font-display:'Fraunces'; --pc-font-body:'Work Sans';
+     Se reemplazan por la paleta e identidad tipográfica de Nitxu.Art. */
+  --pc-bg: transparent;
+  --pc-surface: var(--crema-principal, #F3EDE3);
+  --pc-surface-raised: var(--beige, #E8DED0);
+  --pc-line: var(--linea, #DCD1BF);
+  --pc-ochre: #B9832E;
+  --pc-ochre-soft: rgba(185, 131, 46, 0.14);
+  --pc-teal: #3f6259;
+  --pc-teal-soft: rgba(63, 98, 89, 0.10);
+  --pc-ink: var(--negro, #111111);
+  --pc-ink-dim: var(--gris-calido, #6F6A63);
+  --pc-font-display: var(--font-editorial, 'Cormorant Garamond', Georgia, serif);
+  --pc-font-body: var(--font-cuerpo, 'DM Sans', sans-serif);
+
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.paint-calculator__card {
+  border-radius: 0;
+  border: 1px solid var(--pc-line);
+  padding: clamp(28px, 5vw, 48px);
+}
+
+.paint-calculator__card::before {
+  /* pincelada decorativa: se atenúa para no competir con las obras */
+  opacity: 0.6;
+}
+
+.paint-calculator__title {
+  font-style: italic;
+}
+
+.paint-calculator__option {
+  border-radius: 0;
+}
+
+.paint-calculator__result {
+  border-radius: 0;
+}

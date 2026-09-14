@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nitxu.Art — Cuadros, dibujos y arte personalizado</title>
+<meta name="description" content="Nitxu.Art transforma fotografías, personas, recuerdos e ideas en cuadros originales hechos a mano, en anime y realismo, a color o en blanco y negro.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Nitxu.Art — Cuadros, dibujos y arte personalizado">
+<meta property="og:description" content="Convertimos tus momentos, personas e ideas en arte. Retratos y obras originales hechas a mano.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/logo.png">
+
+<link rel="icon" href="/assets/logo.png">
+
+<!-- Tipografías: DM Sans (interfaz y texto) + Cormorant Garamond (títulos editoriales) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ ENCABEZADO / NAVEGACIÓN ============ -->
+<header class="site-header" id="inicio">
+  <div class="site-header__inner">
+    <a href="#inicio" class="site-header__mark">Nitxu.Art</a>
+
+    <nav class="site-nav" aria-label="Navegación principal">
+      <ul class="site-nav__list" id="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#obras">Obras</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#personalizados">Personalizados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="site-nav__social">
+        <a href="https://instagram.com/tuinstagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:tucorreo@email.com">Email</a>
+      </div>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+      <span id="nav-toggle-label">Menú</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero">
+    <div class="hero__text">
+      <p class="hero__eyebrow">Cuadros · Dibujos · Arte</p>
+      <h1 class="hero__title">Nitxu.Art</h1>
+      <p class="hero__lead">Convertimos tus momentos, personas e ideas en arte.</p>
+      <p class="hero__sub">Retratos y obras originales hechas a mano, con la intención de capturar lo que te hace único.</p>
+      <div class="hero__actions">
+        <a href="#obras" class="btn btn--primary">Ver obras →</a>
+        <a href="#personalizados" class="btn btn--ghost">Encargar un cuadro →</a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="media-placeholder" data-placeholder-for="assets/hero.jpg">
+        <span>Fotografía de una obra o del proceso de creación<br><code>/assets/hero.jpg</code></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. SOBRE MÍ ============ -->
+  <section class="section section--sobre-mi" id="sobre-mi">
+    <div class="section__header">
+      <p class="section__eyebrow">Sobre mí</p>
+      <h2 class="section__title section__title--serif">Detrás de cada cuadro</h2>
+    </div>
+
+    <div class="sobre-mi__grid">
+      <div class="sobre-mi__texto">
+        <p>
+          Soy la persona detrás de Nitxu.Art. Pinto a mano cada encargo, cuidando los
+          detalles que hacen que un retrato deje de ser una foto y se convierta en una obra.
+        </p>
+        <p>
+          Este texto es provisional — reemplazalo con tu propia presentación: cómo empezaste
+          a pintar, qué te interesa capturar en cada obra, y qué pueden esperar quienes
+          encarguen un cuadro personalizado.
+        </p>
+        <div class="media-placeholder media-placeholder--small" data-placeholder-for="assets/sobre-mi.jpg">
+          <span>Fotografía personal<br><code>/assets/sobre-mi.jpg</code></span>
+        </div>
+      </div>
+      <div class="media-placeholder media-placeholder--tall" data-placeholder-for="assets/proceso.jpg">
+        <span>Fotografía del proceso<br><code>/assets/proceso.jpg</code></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. OBRAS / GALERÍA ============ -->
+  <section class="section section--obras" id="obras">
+    <div class="section__header">
+      <p class="section__eyebrow">Galería</p>
+      <h2 class="section__title section__title--serif">Obras</h2>
+    </div>
+
+    <div class="gallery" id="gallery" aria-live="polite">
+      <p class="gallery__status" id="gallery-status">Cargando obras…</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. PERSONALIZADOS ============ -->
+  <section class="section section--personalizados" id="personalizados">
+    <div class="section__header">
+      <p class="section__eyebrow">Encargos</p>
+      <h2 class="section__title section__title--serif">Tu foto. Tu historia. Tu obra.</h2>
+    </div>
+
+    <div class="personalizados__grid">
+      <p class="personalizados__texto">
+        Puedo transformar una fotografía, una persona, un personaje, un recuerdo o
+        simplemente una idea en una obra artística hecha a mano. Vos elegís el estilo,
+        si preferís color o blanco y negro, el tamaño del lienzo y las características
+        principales de la composición — yo me encargo de darle forma.
+      </p>
+      <ul class="personalizados__opciones">
+        <li>Estilo: anime o realismo</li>
+        <li>Color o blanco y negro</li>
+        <li>Tamaño del lienzo</li>
+        <li>Características de la composición</li>
+      </ul>
+    </div>
+
+    <a href="#calculadora" class="btn btn--primary">Encargar mi cuadro →</a>
+  </section>
+
+  <!-- ============ 5. CÓMO FUNCIONA ============ -->
+  <section class="section section--proceso">
+    <div class="section__header">
+      <p class="section__eyebrow">Proceso</p>
+      <h2 class="section__title section__title--serif">¿Cómo funciona?</h2>
+    </div>
+
+    <ol class="proceso__pasos">
+      <li class="proceso__paso">
+        <span class="proceso__numero">01</span>
+        <h3>Elige tu referencia</h3>
+        <p>Envías la fotografía, personaje, recuerdo o idea que quieres convertir en obra.</p>
+      </li>
+      <li class="proceso__paso">
+        <span class="proceso__numero">02</span>
+        <h3>Personaliza</h3>
+        <p>Elegimos el estilo, tamaño, color y características principales.</p>
+      </li>
+      <li class="proceso__paso">
+        <span class="proceso__numero">03</span>
+        <h3>Creo tu obra</h3>
+        <p>La obra se realiza artesanalmente cuidando los detalles y características elegidas.</p>
+      </li>
+      <li class="proceso__paso">
+        <span class="proceso__numero">04</span>
+        <h3>Recibes tu obra</h3>
+        <p>Coordinamos la entrega del cuadro terminado.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 6. CALCULADORA ============ -->
+  <section class="section section--calculadora" id="calculadora">
+    <div class="section__header">
+      <p class="section__eyebrow">Presupuesto</p>
+      <h2 class="section__title section__title--serif">Calculá el precio de tu cuadro</h2>
+    </div>
+
+    <!-- INICIO CALCULADORA DE PINTURAS (integrada desde calculadora.html) -->
+    <div class="paint-calculator">
+      <div class="paint-calculator__card">
+
+        <p class="paint-calculator__eyebrow">Encargos personalizados</p>
+        <h3 class="paint-calculator__title">Calculá el precio de tu pintura</h3>
+        <p class="paint-calculator__subtitle">Elegí las características de tu pintura para obtener un precio estimado.</p>
+
+        <!-- Selector 1: Tamaño -->
+        <div class="paint-calculator__section">
+          <span class="paint-calculator__section-label">Tamaño del lienzo</span>
+          <div class="paint-calculator__options" role="group" aria-label="Tamaño del lienzo" data-pc-group="size">
+            <button type="button" class="paint-calculator__option" data-pc-option="size" data-pc-value="18x24" aria-pressed="false">
+              <span class="paint-calculator__swatch-size paint-calculator__swatch-size--sm"></span>
+              <span class="paint-calculator__option-name">18 × 24 cm</span>
+            </button>
+            <button type="button" class="paint-calculator__option" data-pc-option="size" data-pc-value="40x50" aria-pressed="false">
+              <span class="paint-calculator__swatch-size paint-calculator__swatch-size--lg"></span>
+              <span class="paint-calculator__option-name">40 × 50 cm</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Selector 2: Estilo -->
+        <div class="paint-calculator__section">
+          <span class="paint-calculator__section-label">Estilo de pintura</span>
+          <div class="paint-calculator__options" role="group" aria-label="Estilo de pintura" data-pc-group="style">
+            <button type="button" class="paint-calculator__option" data-pc-option="style" data-pc-value="anime" aria-pressed="false">
+              <span class="paint-calculator__swatch-style paint-calculator__swatch-style--anime"></span>
+              <span class="paint-calculator__option-name">Anime</span>
+            </button>
+            <button type="button" class="paint-calculator__option" data-pc-option="style" data-pc-value="realismo" aria-pressed="false">
+              <span class="paint-calculator__swatch-style paint-calculator__swatch-style--realismo"></span>
+              <span class="paint-calculator__option-name">Realismo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Selector 3: Color -->
+        <div class="paint-calculator__section">
+          <span class="paint-calculator__section-label">Color</span>
+          <div class="paint-calculator__options" role="group" aria-label="Color" data-pc-group="color">
+            <button type="button" class="paint-calculator__option" data-pc-option="color" data-pc-value="byn" aria-pressed="false">
+              <span class="paint-calculator__swatch-color paint-calculator__swatch-color--byn"></span>
+              <span class="paint-calculator__option-name">Blanco y negro</span>
+            </button>
+            <button type="button" class="paint-calculator__option" data-pc-option="color" data-pc-value="color" aria-pressed="false">
+              <span class="paint-calculator__swatch-color paint-calculator__swatch-color--color"></span>
+              <span class="paint-calculator__option-name">A color</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="paint-calculator__result" data-pc-result aria-live="polite">
+          <p class="paint-calculator__result-label">Precio estimado</p>
+          <p class="paint-calculator__result-value" data-pc-price>Elegí las tres opciones</p>
+          <p class="paint-calculator__result-note">El precio es una estimación y puede variar según la complejidad de la obra solicitada.</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- FIN CALCULADORA DE PINTURAS -->
+
+    <p class="calculadora__nota">¿Ya tenés claro tu cuadro? <a href="#contacto">Escribime por contacto →</a></p>
+  </section>
+
+  <!-- ============ 7. CONTACTO ============ -->
+  <section class="section section--contacto" id="contacto">
+    <div class="section__header">
+      <p class="section__eyebrow">Contacto</p>
+      <h2 class="section__title section__title--serif">Hablemos de tu cuadro</h2>
+    </div>
+
+    <ul class="contacto__lista">
+      <li><span>Instagram</span><a href="https://instagram.com/tuinstagram" target="_blank" rel="noopener">@tuinstagram</a></li>
+      <li><span>Email</span><a href="mailto:tucorreo@email.com">tucorreo@email.com</a></li>
+      <li><span>WhatsApp</span><span class="contacto__proximamente">Próximamente</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ============ 8. FOOTER ============ -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__mark">
+      <p class="site-footer__nombre">Nitxu.Art</p>
+      <p class="site-footer__descriptor">Cuadros · Dibujos · Arte</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="https://instagram.com/tuinstagram" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:tucorreo@email.com">Email</a>
+    </div>
+  </div>
+  <p class="site-footer__copy">© <span id="footer-year"></span> Nitxu.Art. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de obra" hidden>
+  <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">Cerrar</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Obra anterior">←</button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Obra siguiente">→</button>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/calculadora.js"></script>
+</body>
+</html>
