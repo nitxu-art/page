@@ -317,6 +317,24 @@ button {
 .media-placeholder--small { min-height: 200px; margin-top: 24px; }
 .media-placeholder--tall { min-height: 460px; }
 
+/* Imagen real que reemplaza a un .media-placeholder una vez que el
+   archivo correspondiente existe en /assets (ver js/app.js). Hereda
+   la altura mínima del contenedor original a través de la clase que
+   tenía el placeholder, por eso conviene no borrar esas clases. */
+.media-placeholder__img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.site-header__logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
 /* Cuando exista una imagen real, este atributo permite
    reemplazar el placeholder por un <img> sin tocar el resto
    del CSS: alcanza con poner background-image inline o cambiar

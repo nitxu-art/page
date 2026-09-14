@@ -20,6 +20,25 @@ pidiendo que se configure, en vez de romperse o quedar vacía.
 El repositorio de GitHub tiene que ser **público** para que la API gratuita
 de GitHub pueda leer las carpetas sin necesitar login.
 
+## 1.1 Truco para crear carpetas nuevas desde la web de GitHub
+
+GitHub no permite crear una carpeta vacía desde el navegador: solo se crean
+carpetas subiendo un archivo adentro. Si `secciones/anime/color/` (o
+cualquier otra) todavía no existe en tu repositorio, hacé esto:
+
+```
+1. En tu repositorio, click en "Add file" → "Upload files"
+2. Arrastrá la imagen de la obra
+3. Antes de confirmar, en el campo del nombre del archivo escribí
+   la ruta completa, por ejemplo:
+   secciones/anime/color/obra-01.jpg
+4. Hacé commit
+```
+
+Al escribir la ruta completa en el nombre, GitHub crea las carpetas que
+falten automáticamente. Repetí esto para cada carpeta que necesites
+(`secciones/anime/byn/`, `secciones/realismo/color/`, etc.).
+
 ## 2. ¿Cómo agrego una obra?
 
 No hace falta tocar el HTML ni el JavaScript. Los pasos son siempre los mismos:
@@ -88,9 +107,11 @@ Estos archivos todavía no existen y hay que agregarlos a mano en `/assets`:
 Mientras no estén, el sitio muestra un recuadro beige indicando qué imagen
 falta en ese lugar — el sitio no se rompe ni se ve vacío.
 
-Una vez que subas `assets/logo.png` o `assets/logo.svg`, reemplazá el texto
-"Nitxu.Art" del encabezado (`.site-header__mark` en `index.html`) por una
-etiqueta `<img>` apuntando a ese archivo.
+**No hace falta editar el HTML.** En cuanto subís el archivo con el nombre
+exacto que corresponde (`assets/hero.jpg`, `assets/sobre-mi.jpg`,
+`assets/proceso.jpg`, `assets/logo.png` o `assets/logo.svg`), el sitio lo
+detecta solo y reemplaza el recuadro por la imagen real la próxima vez que
+alguien lo visite.
 
 ## 7. Publicar en GitHub Pages
 
