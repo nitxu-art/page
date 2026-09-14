@@ -12,8 +12,8 @@
   /* =========================================================
      CONFIGURACIÓN — completar con los datos del repositorio
      ========================================================= */
-  var GITHUB_USER = "TU-USUARIO";
-  var GITHUB_REPO = "TU-REPOSITORIO";
+  var GITHUB_USER = "nitxu-art";
+  var GITHUB_REPO = "page";
   var GITHUB_BRANCH = "main";
   var SECTIONS_PATH = "secciones";
 
